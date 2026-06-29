@@ -13,7 +13,13 @@ $sqlClientes = "SELECT COUNT(*) AS total FROM clientes";
 $resultadoClientes = mysqli_query($conexao, $sqlClientes);
 $totalClientes = mysqli_fetch_assoc($resultadoClientes);
 
-$sqlMaiorPreco = "SELECT"
+$sqlMaiorSalario = "SELECT MAX(Salario) AS maiorSalario FROM funcionarios";
+$resultadoMaiorSalario = mysqli_query($conexao, $sqlMaiorSalario);
+$totalSalario = mysqli_fetch_assoc($resultadoMaiorSalario);
 
-$sqlMaiorSalario
+$sqlMaiorPreco = "SELECT MAX(Preco) AS maiorPreco FROM produtos";
+$resultadoMaiorPreco = mysqli_query($conexao, $sqlMaiorPreco);
+$totalPreco = mysqli_fetch_assoc($resultadoMaiorPreco);
+
+include "header.php";
 ?>

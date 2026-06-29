@@ -1,6 +1,6 @@
 <?php
 define('SERVIDOR','localhost');
-define('USUARIO','');
+define('USUARIO','root');
 define('SENHA','');
 define('BASEDADOS','empresa26');
 

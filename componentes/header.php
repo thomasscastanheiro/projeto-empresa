@@ -42,6 +42,7 @@ href="funcionarios.php">Funcionários</a>
 <?php
 $paginaAtual = basename($_SERVER["PHP_SELF"]);
 ?>
+<link rel="stylesheet" href="style.css">
     <header>
         <a href="index.php">PE</a>
 
