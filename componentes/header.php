@@ -42,6 +42,14 @@ href="funcionarios.php">Funcionários</a>
 <?php
 $paginaAtual = basename($_SERVER["PHP_SELF"]);
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <link rel="stylesheet" href="style.css">
     <header>
         <a href="index.php">PE</a>

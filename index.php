@@ -21,5 +21,30 @@ $sqlMaiorPreco = "SELECT MAX(Preco) AS maiorPreco FROM produtos";
 $resultadoMaiorPreco = mysqli_query($conexao, $sqlMaiorPreco);
 $totalPreco = mysqli_fetch_assoc($resultadoMaiorPreco);
 
-include "header.php";
+include "componentes/header.php";
+include "componentes/footer.php";
 ?>
+<main class="container">
+    <section>
+        <article>
+            <h3>Total de produtos</h3>
+            <h4><?php echo($totalProdutos["total"]);?></h4>
+        </article>
+        <article>
+            <h3>Total de funcionários</h3>
+            <h4><?php echo($totalFuncionarios["total"]);?></h4>
+        </article>
+        <article>
+            <h3>Total de clientes</h3>
+            <h4><?php echo($totalClientes["total"]);?></h4>
+        </article>
+        <article>
+            <h3>Maior salário</h3>
+            <h4><?php echo number_format($totalSalario["maiorSalario"]);?></h4>
+        </article>
+        <article>
+            <h3>Maior preço</h3>
+            <h4><?php echo number_format($totalPreco["maiorPreco"]);?></h4>
+        </article>
+    </section>
+</main>
