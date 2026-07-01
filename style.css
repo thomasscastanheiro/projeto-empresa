@@ -1,4 +1,4 @@
-* { 
+/* * { 
 box-sizing: border-box;
 }
 body {
@@ -8,6 +8,21 @@ background: #f5f7fb;
 color: #172033;
 }
 header{
+position: fixed;
+top: 0;
+left: 220px;
+right: 0;
+height: 72px;
+background: #ffffff;
+border-bottom: 1px solid #e5e7eb;
+display: flex;
+align-items: center;
+gap: 24px;
+padding: 0 28px;
+z-index: 10;
+}
+
+.topo{
 position: fixed;
 top: 0;
 left: 220px;
@@ -31,20 +46,25 @@ font-size: 15px;
 font-weight: 900;
 text-decoration: none;
 }
-/*.topbar-marca {
+.topbar-marca {
 display: flex;
 flex-direction: column;
 min-width: 170px;
-}*/
-header h1{
+}
+.topbar-marca strong {
 font-size: 15px;
 }
-.busca-global {
+.topbar-marca span {
+font-size: 12px;
+color: #2563eb;
+font-weight: 700;
+}
+.pesquisa{
 flex: 1;
 display: flex;
 gap: 10px;
 }
-.busca-global input,
+.pesquisa input,
 .filtro-produtos input {
 width: 100%;
 border: 1px solid #cbd5e1;
@@ -52,7 +72,91 @@ border-radius: 12px;
 padding: 12px 14px;
 font-size: 14px;
 }
-.busca-global button,
+.pesquisa button,
+.filtro-produtos button,
+.botao {
+border: 0;
+border-radius: 12px;
+background: #0b63ce;
+color: white;
+padding: 12px 18px;
+font-weight: 700;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+}
+.usuario {
+background: #f1f5f9;
+padding: 10px 14px;
+border-radius: 999px;
+color: #334155;
+font-size: 13px;
+}
+aside {
+position: fixed;
+top: 0;
+left: 0;
+bottom: 0;
+width: 220px;
+background: linear-gradient(180deg, #061833, #0b2a55);
+color: white;
+padding: 28px 20px;
+}
+.logo-sistema {
+width: 56px;
+height: 56px;
+border-radius: 16px;
+background: #0b63ce;
+display: grid;
+place-items: center;
+font-weight: 900;
+margin-bottom: 28px;
+box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
+}
+aside nav {
+display: grid;
+gap: 10px;
+}
+aside a {
+color: #dbeafe;
+text-decoration: none;
+padding: 12px 14px;
+border-radius: 12px;
+font-weight: 700;
+}
+aside a.ativo,
+aside a:hover {
+background: #0b63ce;
+color: white;
+}
+
+.menu-mobile {
+border: 0;
+background: #eff6ff;
+color: #0f3b75;
+border-radius: 10px;
+padding: 10px 12px;
+font-size: 15px;
+font-weight: 900;
+text-decoration: none;
+}
+header h1{
+font-size: 15px;
+}
+.pesquisa {
+flex: 1;
+display: flex;
+gap: 10px;
+}
+.pesquisa input,
+.filtro-produtos input {
+width: 100%;
+border: 1px solid #cbd5e1;
+border-radius: 12px;
+padding: 12px 14px;
+font-size: 14px;
+}
+.pesquisa button,
 .filtro-produtos button,
 .botao {
 border: 0;
@@ -109,7 +213,7 @@ aside a:hover {
 background: #0b63ce;
 color: white;
 }
-.container {
+main{
 margin-left: 220px;
 padding: 104px 32px 36px;
 max-width: 1280px;
@@ -137,17 +241,217 @@ margin-bottom: 24px;
 .titulo-pagina p {
 color: #64748b;
 }
-.cards-resumo,
+.sessaoCards,
 .grid-produtos {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 gap: 18px;
 }
-.card-resumo,
+.cardResumo,
 .card-produto,
 .detalhe-produto,
 .bloco-informativo {
 background: white;
 border: 1px solid #e5e7eb;
 border-radius: 22px;
-padding: 22;}
+padding: 22px;
+}*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+.topo {
+    position: fixed;
+    top: 0;
+    left: 220px;
+    right: 0;
+    height: 72px;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 28px;
+    z-index: 10;
+}
+
+.topo h1 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.topbar-marca {
+    display: flex;
+    flex-direction: column;
+    min-width: 170px;
+}
+
+.topbar-marca strong {
+    font-size: 15px;
+}
+
+.topbar-marca span {
+    font-size: 12px;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.menu-mobile {
+    border: 0;
+    background: #eff6ff;
+    color: #0f3b75;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.pesquisa {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.pesquisa input,
+.filtro-produtos input {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+.pesquisa button,
+.filtro-produtos button,
+.botao {
+    border: 0;
+    border-radius: 12px;
+    background: #0b63ce;
+    color: white;
+    padding: 12px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.usuario {
+    background: #f1f5f9;
+    padding: 10px 14px;
+    border-radius: 999px;
+    color: #334155;
+    font-size: 13px;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    background: linear-gradient(180deg, #061833, #0b2a55);
+    color: white;
+    padding: 28px 20px;
+}
+
+.logo-sistema {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: #0b63ce;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    margin-bottom: 28px;
+    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+aside nav {
+    display: grid;
+    gap: 10px;
+}
+
+aside a {
+    color: #dbeafe;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+aside a.ativo,
+aside a:hover {
+    background: #0b63ce;
+    color: white;
+}
+
+.conteudo{
+    margin-left: 220px;
+    padding: 104px 32px 36px;
+    max-width: 1280px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #061833, #0b63ce);
+    color: white;
+    border-radius: 26px;
+    padding: 42px;
+    margin-bottom: 26px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+}
+
+.hero h1,
+.titulo-pagina h1 {
+    margin: 0 0 10px;
+}
+
+.hero p,
+.titulo-pagina p {
+    margin: 0;
+    color: #dbeafe;
+}
+
+.titulo-pagina {
+    margin-bottom: 24px;
+}
+
+.titulo-pagina p {
+    color: #64748b;
+}
+
+.sessaoCards,
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.cardResumo,
+.card-produto,
+.detalhe-produto,
+.bloco-informativo {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    padding: 22px;
+}
+
+.cardResumo h3 {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.cardResumo h4 {
+    margin: 12px 0 0;
+    font-size: 32px;
+    color: #0b63ce;
+}

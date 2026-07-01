@@ -22,29 +22,35 @@ $resultadoMaiorPreco = mysqli_query($conexao, $sqlMaiorPreco);
 $totalPreco = mysqli_fetch_assoc($resultadoMaiorPreco);
 
 include "componentes/header.php";
-include "componentes/footer.php";
 ?>
-<main class="container">
-    <section>
-        <article>
+<main class="conteudo">
+    <section class="hero">
+        <h1>Painel empresarial</h1>
+        <p>Dashboard de consulta</p>
+    </section>
+    <section class="sessaoCards">
+        <article class="cardResumo">
             <h3>Total de produtos</h3>
             <h4><?php echo($totalProdutos["total"]);?></h4>
         </article>
-        <article>
+        <article class="cardResumo">
             <h3>Total de funcionários</h3>
             <h4><?php echo($totalFuncionarios["total"]);?></h4>
         </article>
-        <article>
+        <article class="cardResumo">
             <h3>Total de clientes</h3>
             <h4><?php echo($totalClientes["total"]);?></h4>
         </article>
-        <article>
+        <article class="cardResumo">
             <h3>Maior salário</h3>
             <h4><?php echo number_format($totalSalario["maiorSalario"]);?></h4>
         </article>
-        <article>
+        <article class="cardResumo">
             <h3>Maior preço</h3>
             <h4><?php echo number_format($totalPreco["maiorPreco"]);?></h4>
         </article>
     </section>
 </main>
+<?php
+include "componentes/footer.php";
+?>
